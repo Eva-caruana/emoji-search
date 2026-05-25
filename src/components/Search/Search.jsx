@@ -5,7 +5,7 @@ import Line from "../Line/Line";
 
 const Search = () => {
   const [emojiName, setEmojiName] = useState("");
-
+  //filter the selection by keyword
   const result = emojis.filter(function (item) {
     if (item.keywords.includes(emojiName)) {
       return item.symbol && item.title;
@@ -14,25 +14,24 @@ const Search = () => {
     }
   });
   return (
-    <section>
+    <section className="container">
       <input
+        className="search-input"
         type="text"
         id="emoji"
-        placeholder="what emoji are you looking for ?"
+        placeholder="Which emoji are you looking for ?"
         value={emojiName}
         onChange={(event) => {
           setEmojiName(event.target.value);
         }}
       />
 
-      {result.slice(0, 30).map((element, key) => {
+      {result.slice(0, 30).map((element) => {
         return (
           <Line
             key={element.title}
             symbol={element.symbol}
             title={element.title}
-            emojiName={emojiName}
-            setEmojiName={setEmojiName}
           />
         );
       })}

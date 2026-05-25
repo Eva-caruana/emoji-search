@@ -1,7 +1,35 @@
 .emoji-line {
-  line-height: 20px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  margin: 10px 0;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: #fcfbfb;
+  position: relative;
+}
+
+.emoji-line:hover {
+  background-color: var(--color-light-pink);
+}
+
+.left-side {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+}
+
+.right-side {
+  padding-right: 10px;
+  color: var(--color-grey);
+  font-size: 15px;
+  display: none;
+}
+
+.emoji-line:hover .right-side {
+  display: block;
 }

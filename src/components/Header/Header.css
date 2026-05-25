@@ -1,4 +1,19 @@
 h1 {
-  font-size: 30px;
-  color: black;
+  font-size: 40px;
+  color: var(--color-grey);
+  text-align: center;
+  margin: 30px 0px;
+}
+
+/* -------------------------Responsive */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
 }
